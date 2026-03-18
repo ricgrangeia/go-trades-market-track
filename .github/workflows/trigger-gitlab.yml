@@ -1,0 +1,13 @@
+name: Trigger GitLab CI
+on: [push]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call GitLab API
+        run: |
+          curl --request POST \
+               --form token=${{ secrets.GITLAB_TRIGGER_TOKEN }} \
+               --form ref=main \
+               "https://gitlab.com/api/v4/projects/YOUR_PROJECT_ID/trigger/pipeline"
