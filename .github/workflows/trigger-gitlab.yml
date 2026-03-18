@@ -8,6 +8,6 @@ jobs:
       - name: Call GitLab API
         run: |
           curl --request POST \
-               --form token=${{ secrets.GITLAB_TRIGGER_TOKEN }} \
+               --form token=noneed \
                --form ref=main \
-               "https://gitlab.com/api/v4/projects/YOUR_PROJECT_ID/trigger/pipeline"
+               "${{ secrets.GITLAB_TRIGGER_TOKEN }}"
