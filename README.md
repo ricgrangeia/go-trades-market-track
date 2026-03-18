@@ -18,6 +18,7 @@ This project tracks trading flows on Binance by aggregating trade data from the 
   - `POSTGRES_DSN`: Database connection string.
   - `PAIRS_OVERRIDE`: Comma-separated list of trading pairs to monitor.
   - `DEBUG`: Set to `1` to enable debug logging.
+  - `NETWORK_NAME="database-network"` As default network.
 
 ### Running the Project
 
